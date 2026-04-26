@@ -23,7 +23,13 @@ class CryptoCurrencyListApp extends StatelessWidget {
           bodyMedium: TextStyle(
             color: const Color.fromARGB(255, 227, 227, 227),
             fontSize: 20,
-            fontWeight: FontWeight.bold,
+            fontWeight: FontWeight.normal,
+          ),
+
+          bodySmall: TextStyle(
+            color: const Color.fromARGB(255, 227, 227, 227),
+            fontSize: 14,
+            fontWeight: FontWeight.normal,
           ),
         ),
       ),
@@ -55,7 +61,7 @@ class _MainPageState extends State<MainPage> {
         itemBuilder: (context, index){
           return ListTile(
             title: Text("Cryptocurrency $index", style: Theme.of(context).textTheme.bodyMedium,),
-            subtitle: Text("${index*1000} USD", style: Theme.of(context).textTheme.bodyMedium,),
+            subtitle: Text("${index*1000} USD", style: Theme.of(context).textTheme.bodySmall,),
           );
         },
 
